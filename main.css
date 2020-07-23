@@ -7,9 +7,9 @@
     --light-gravish-blue: hsl(210, 46%, 95%);
 }
 
-html, body{
+html, body {
     font-size: 13px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Manrope', sans-serif;
     background: var(--light-gravish-blue);
     height: 100%;
     width: 100%;
@@ -17,38 +17,32 @@ html, body{
     place-items: center;
 }
 
-.card{
+.card {
     width: 45%;
     height: fit-content;
     display: grid;
     grid-template-columns: minmax(150px, 45%) 1fr;
 }
 
-.drawer{
+.drawer {
     object-fit: cover;
     object-position: 15% 50%;
     width: 100%;
     height: 100%;
 }
 
-.text{
+.text {
     background: white;
     padding: 10px 40px;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--very-dark-gravish-blue);
 }
 
-h4 {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--desaturated-dark-blue);
-}
-
-.name{
+.name {
     font-weight: 700;
     color: var(--very-dark-gravish-blue);
 }
@@ -58,42 +52,89 @@ h4 {
     color: var(--gravish-blue)
 }
 
-.info{
+h4 {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--desaturated-dark-blue);
+}
+
+.info {
     display: flex;
     align-items: center;
 }
 
-.avatar{
+.avatar {
     border-radius: 100%;
     object-fit: cover;
     height: 100%;
     width: 13%;
 }
 
-.info-text{
+.name {
+    color: var(--very-dark-gravish-blue);
+}
+
+.info-text {
     display: block;
-    margin-left: 3% ;
+    margin-left: 3%;
     width: 90%;
     line-height: 0.7;
 }
 
-.share-button{
-    width: 20%;
-    object-fit: none;
-    background: var(--very-dark-gravish-blue);
-    border-radius: 50%;
-    border-color: transparent;
-    z-index: -1;
+.share-text {
+    color: var(--gravish-blue);
+    font-weight: 500;
 }
 
-@media(max-width: 375px){
-    .card{
+.share-button {
+    width: 20%;
+    object-fit: none;
+    background: var(--light-gravish-blue);
+    border-radius: 40px;
+    border-color: transparent;
+    z-index: 1;
+}
+
+.share-window {
+    background: var(--very-dark-gravish-blue);
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    display: inline-flex;
+    visibility: hidden;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.share-window > p, .icon {
+    margin: 5px;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 375px) {
+    .card {
         margin-top: 30%;
         height: 100%;
         width: 90%;
         display: flex;
         flex-direction: column;
     }
-
-    
+    .share-window {
+        position: relative;
+        top: -8.3%;
+        left: 1%;
+        width: 83%;
+        padding: 15px 15px 15px 35px;
+    }
+    .attribution {
+        position: relative;
+        left: 35%;
+    }
 }
